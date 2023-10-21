@@ -1,75 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AddPost">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/mypostbtn2"
-        android:layout_width="112dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="182dp"
-        android:layout_marginEnd="17dp"
-        android:contentDescription="View My Posts"
-        app:icon="@drawable/user"
-        app:iconGravity="textStart"
-        app:iconPadding="0dp"
-        app:iconSize="50dp"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_description" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:verticalScrollbarPosition="right"
+        tools:context=".AddPost">
 
-    <Button
-        android:id="@+id/expbtn2"
-        android:layout_width="112dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="182dp"
-        android:contentDescription="Explore Other's Posts"
-        android:isScrollContainer="false"
-        android:pointerIcon="none"
-        app:icon="@android:drawable/ic_menu_compass"
-        app:iconGravity="textStart"
-        app:iconPadding="0dp"
-        app:iconSize="50dp"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_description" />
 
-    <Button
-        android:id="@+id/addbtn2"
-        android:layout_width="112dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="92dp"
-        android:contentDescription="Add A New Post"
-        app:icon="@android:drawable/ic_menu_add"
-        app:iconGravity="textStart"
-        app:iconPadding="0dp"
-        app:iconSize="50dp"
-        app:layout_constraintStart_toEndOf="@+id/expbtn2"
-        app:layout_constraintTop_toBottomOf="@+id/insertbtn" />
+        <Button
+            android:id="@+id/mypostbtn2"
+            android:layout_width="112dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="192dp"
+            android:layout_marginEnd="24dp"
+            android:contentDescription="View My Posts"
+            app:icon="@drawable/user"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="50dp"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_description" />
 
-    <TextView
-        android:id="@+id/img_url"
-        android:layout_width="214dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="152dp"
-        android:ems="10"
-        android:hint="Enter Image Url"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="Image Url"
-        android:textAlignment="center"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/picker"
-        tools:ignore="TouchTargetSizeCheck" />
+        <Button
+            android:id="@+id/expbtn2"
+            android:layout_width="112dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="192dp"
+            android:contentDescription="Explore Other's Posts"
+            android:isScrollContainer="false"
+            android:pointerIcon="none"
+            app:icon="@android:drawable/ic_menu_compass"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="50dp"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_description" />
 
-    <EditText
+        <Button
+            android:id="@+id/addbtn2"
+            android:layout_width="112dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="96dp"
+            android:contentDescription="Add A New Post"
+            app:icon="@android:drawable/ic_menu_add"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="50dp"
+            app:layout_constraintStart_toEndOf="@+id/expbtn2"
+            app:layout_constraintTop_toBottomOf="@+id/insertbtn" />
+
+        <TextView
+            android:id="@+id/img_url"
+            android:layout_width="214dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="152dp"
+            android:ems="10"
+            android:hint="Enter Image Url"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:text="Image Url"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picker"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
         android:id="@+id/user_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,47 +91,48 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="71dp"
-        android:text="Writer your recipes here:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="72dp"
+            android:text="Writer your recipes here:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <Button
-        android:id="@+id/insertbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="42dp"
-        android:onClick="onPostButtonClick"
-        android:text="Post"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_description" />
+        <Button
+            android:id="@+id/insertbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="48dp"
+            android:onClick="onPostButtonClick"
+            android:text="Post"
+            app:iconPadding="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_description" />
 
-    <Button
-        android:id="@+id/picker"
-        android:layout_width="156dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="118dp"
-        android:layout_marginTop="67dp"
-        android:onClick="onImagePickerButtonClick"
-        android:text="Choose Image"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/picker"
+            android:layout_width="156dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="72dp"
+            android:onClick="onImagePickerButtonClick"
+            android:text="Choose Image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="107dp"
-        android:layout_height="116dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="148dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/picker"
-        tools:srcCompat="@tools:sample/avatars" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="107dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="152dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picker"
+            tools:srcCompat="@tools:sample/avatars" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
